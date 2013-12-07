@@ -7,6 +7,7 @@
 //
 
 #import "StoryViewController.h"
+#import "NewsFeedItem.h"
 
 @interface StoryViewController ()
 
@@ -40,10 +41,28 @@
     [super viewWillAppear:animated];
     
     //check here the type of the newsfeed item
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Add"
-                                                                              style:UIBarButtonItemStylePlain
-                                                                             target:self
-                                                                             action:@selector(addToCalendar)];
+    NSString *event = @"Event";
+    NSString *project = @"Project";
+    
+    if (_item.type == event) {
+    
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Add"
+                                                                                  style:UIBarButtonItemStylePlain
+                                                                                 target:self
+                                                                                 action:@selector(addToCalendar)];
+    }
+    
+    if (_item.type == project) {
+        
+        self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Donate"
+                                                                                  style:UIBarButtonItemStylePlain
+                                                                                 target:self
+                                                                                 action:@selector(donate)];
+    }
+    
+    self.title = _item.title;
+    self.body.text = _item.content;
+    self.imageView.image = _item.image;
 }
 
 - (void)addToCalendar {

@@ -13,6 +13,7 @@
 - (id)initWithType:(NSString *)type
                  title:(NSString *)title
                  blurb:(NSString *)blurb
+               content:(NSString *)content
                  image:(UIImage *)image
 {
     // Call the superclass's designated initializer
@@ -24,6 +25,7 @@
         [self setType:type];
         [self setTitle:title];
         [self setBlurb:blurb];
+        [self setContent:content];
         [self setImage:image];
     }
     
@@ -36,6 +38,7 @@
     return [self  initWithType:@"Story"
                          title:@"Story of the day"
                          blurb:@"We have reached our goal"
+                       content:@"default"
                          image:[UIImage imageNamed:@"give"]];
 }
 @end

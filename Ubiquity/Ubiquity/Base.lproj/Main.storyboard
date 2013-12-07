@@ -243,11 +243,11 @@
             </objects>
             <point key="canvasLocation" x="1823" y="-127"/>
         </scene>
-        <!--Navigation Controller - Newsfeed-->
+        <!--Navigation Controller-->
         <scene sceneID="4wZ-CX-axa">
             <objects>
                 <navigationController definesPresentationContext="YES" id="teY-rS-UVp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Newsfeed" id="uAT-hJ-u7t"/>
+                    <tabBarItem key="tabBarItem" title="" image="home" id="uAT-hJ-u7t"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yaZ-ZV-Qbb">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -306,11 +306,11 @@
             </objects>
             <point key="canvasLocation" x="1302" y="717"/>
         </scene>
-        <!--Navigation Controller - Teams-->
+        <!--Navigation Controller-->
         <scene sceneID="BSg-Gk-bzl">
             <objects>
                 <navigationController definesPresentationContext="YES" id="wBo-yL-gtR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Teams" id="0oL-ki-eJM"/>
+                    <tabBarItem key="tabBarItem" title="" image="users" id="0oL-ki-eJM"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="X7v-sT-UKP">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -322,11 +322,11 @@
             </objects>
             <point key="canvasLocation" x="858" y="717"/>
         </scene>
-        <!--Navigation Controller - Map-->
+        <!--Navigation Controller-->
         <scene sceneID="pSb-3J-IBk">
             <objects>
                 <navigationController definesPresentationContext="YES" id="ihO-D0-bJ3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Map" id="Brp-6o-GZ6"/>
+                    <tabBarItem key="tabBarItem" title="" image="pin" id="Brp-6o-GZ6"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2gG-mS-oaa">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -366,7 +366,10 @@
     </scenes>
     <resources>
         <image name="FB-button" width="36" height="36"/>
+        <image name="home" width="16" height="16"/>
+        <image name="pin" width="16" height="16"/>
         <image name="twitter-button" width="36" height="36"/>
+        <image name="users" width="20" height="16"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
