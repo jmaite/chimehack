@@ -14,6 +14,7 @@
 		C654040818532CFF0029483A /* ProjectTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C654040718532CFF0029483A /* ProjectTableCell.m */; };
 		C654040B18532D710029483A /* EventTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C654040A18532D710029483A /* EventTableCell.m */; };
 		C66EB95B18533885003E4167 /* StoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C66EB95A18533885003E4167 /* StoryViewController.m */; };
+		C66EB96118539BF4003E4167 /* NewsFeedItem.m in Sources */ = {isa = PBXBuildFile; fileRef = C66EB96018539BF4003E4167 /* NewsFeedItem.m */; };
 		C6E4D4A71853110400F44FD2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E4D4A61853110400F44FD2 /* Foundation.framework */; };
 		C6E4D4A91853110400F44FD2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E4D4A81853110400F44FD2 /* CoreGraphics.framework */; };
 		C6E4D4AB1853110400F44FD2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C6E4D4AA1853110400F44FD2 /* UIKit.framework */; };
@@ -53,6 +54,8 @@
 		C654040A18532D710029483A /* EventTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventTableCell.m; sourceTree = "<group>"; };
 		C66EB95918533885003E4167 /* StoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StoryViewController.h; sourceTree = "<group>"; };
 		C66EB95A18533885003E4167 /* StoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StoryViewController.m; sourceTree = "<group>"; };
+		C66EB95F18539BF4003E4167 /* NewsFeedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewsFeedItem.h; sourceTree = "<group>"; };
+		C66EB96018539BF4003E4167 /* NewsFeedItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewsFeedItem.m; sourceTree = "<group>"; };
 		C6E4D4A31853110400F44FD2 /* Ubiquity.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ubiquity.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6E4D4A61853110400F44FD2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		C6E4D4A81853110400F44FD2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -156,6 +159,8 @@
 				C63B5C1D185321D900BB3EA7 /* NewsFeedTableViewController.m */,
 				C66EB95918533885003E4167 /* StoryViewController.h */,
 				C66EB95A18533885003E4167 /* StoryViewController.m */,
+				C66EB95F18539BF4003E4167 /* NewsFeedItem.h */,
+				C66EB96018539BF4003E4167 /* NewsFeedItem.m */,
 			);
 			path = Ubiquity;
 			sourceTree = "<group>";
@@ -285,6 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C66EB96118539BF4003E4167 /* NewsFeedItem.m in Sources */,
 				C66EB95B18533885003E4167 /* StoryViewController.m in Sources */,
 				C65403F6185325040029483A /* StoryTableCell.m in Sources */,
 				C6E4D4B71853110400F44FD2 /* AppDelegate.m in Sources */,

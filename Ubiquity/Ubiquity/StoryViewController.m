@@ -58,5 +58,15 @@
 }
 
 - (IBAction)twitterShare:(id)sender {
+//    SLRequest *postRequest = nil;
+//    NSURL *url = [NSURL URLWithString:@"http://api.twitter.com/1/statuses/update.json"];
+//    NSDictionary *content = @{@"status":self.textToShare};
+//    postRequest = [SLRequest requestForServiceType:SLServiceTypeTwitter
+//                                     requestMethod:SLRequestMethodPOST
+//                                               URL:url
+//                                        parameters:content];
+//    
+//    [postRequest setAccount:self.twitterAccount];
+//    [postRequest performRequestWithHandler:completionHandler];
 }
 @end

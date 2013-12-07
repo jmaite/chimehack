@@ -6,26 +6,36 @@
 //
 //
 
-@class NewsFeedItem; //remove this
 #import "NewsFeedTableViewController.h"
 #import "StoryTableCell.h"
 #import "StoryViewController.h"
-//add this #import "NewsFeedItem.h"
+#import "NewsFeedItem.h"
 
 @interface NewsFeedTableViewController ()
 
 @property (nonatomic, strong) NewsFeedItem *selectedItem;
-@property (nonatomic, strong) NSArray *items;
+@property (nonatomic, strong) NSMutableArray *allItems;
 
 @end
 
 @implementation NewsFeedTableViewController
 
+- (id)init
+{
+    //call the superclass designated initializer
+    self = [super initWithStyle:UITableViewStyleGrouped];
+    
+    if (self) {
+        //_allItems = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
     if (self) {
-        // Custom initialization
+        
     }
     return self;
 }
@@ -41,7 +51,46 @@
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     
-    //TODO build the items NSArray, should contain NewsFeedItem objects
+    //build the items NSArray, should contain NewsFeedItem objects
+    if (!_allItems) {
+        _allItems = [[NSMutableArray alloc] init];
+    }
+    
+    NewsFeedItem *p = [[NewsFeedItem alloc] init];
+    p.type = @"Story";
+    p.title = @"EVERY GIRL NEEDS A \"SHERO\"";
+    p.blurb = @"this is my blurb and more stuffs...";
+    p.image = [UIImage imageNamed:@"give"];
+    
+    [_allItems addObject:p];
+    
+    p.type = @"Event";
+    p.title = @"Benefit concert";
+    p.blurb = @"this is my blurb and more stuffs...";
+    //p.image = [UIImage imageNamed:@"give"];
+    
+    [_allItems addObject:p];
+    
+    p.type = @"Project";
+    p.title = @"RAISE MONEY FOR MALALA";
+    p.blurb = @"this is my blurb and more stuffs...";
+    p.image = [UIImage imageNamed:@"give"];
+    
+    [_allItems addObject:p];
+    
+    p.type = @"Story";
+    p.title = @"NEW HERE OF THE DAY!";
+    p.blurb = @"this is my blurb and more stuffs...";
+    p.image = [UIImage imageNamed:@"give"];
+    
+    [_allItems addObject:p];
+    
+    p.type = @"Story";
+    p.title = @"CHIMEFORCHANGE ROCKS A LOT";
+    p.blurb = @"this is my blurb and more stuffs...";
+    p.image = [UIImage imageNamed:@"give"];
+    
+    [_allItems addObject:p];
 }
 
 - (void)didReceiveMemoryWarning
@@ -61,7 +110,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 3; //self.stories.count;
+    return _allItems.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -69,17 +118,20 @@
     static NSString *CellIdentifier = @"Story";
     StoryTableCell *cell = (StoryTableCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
+    NewsFeedItem *p = [_allItems objectAtIndex:[indexPath row]];
+    
     // Configure the cell...
-    cell.title.text = @"This is a great story";
-    cell.blurb.text = @"This is some super long content that would need to be truncated automatically by the thingamabob.";
-    cell.imageView.image = [UIImage imageNamed:@"story1"];
+    cell.title.text = p.title;
+    cell.blurb.text = p.blurb;
+    cell.imageView.image = p.image;
+
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    self.selectedItem = (NewsFeedItem *)[self.items objectAtIndex:[indexPath row]];
+    self.selectedItem = (NewsFeedItem *)[self.allItems objectAtIndex:[indexPath row]];
 }
 
 /*

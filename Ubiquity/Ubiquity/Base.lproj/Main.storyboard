@@ -40,12 +40,12 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="119"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F0h-oC-DPu">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="119"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F0h-oC-DPu">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="75"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
                                         <view alpha="0.30000000000000004" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mrX-Mb-Qv7">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="323" height="120"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
@@ -63,20 +63,20 @@
                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eka-sf-iMj">
-                                            <rect key="frame" x="20" y="89" width="68" height="30"/>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eka-sf-iMj">
+                                            <rect key="frame" x="20" y="88" width="36" height="36"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Facebook">
+                                            <state key="normal" image="FB-button">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
                                                 <action selector="facebookShare:" destination="5gq-qo-NnO" eventType="touchUpInside" id="Mjp-hs-t8i"/>
                                             </connections>
                                         </button>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dy-uK-Jqm">
-                                            <rect key="frame" x="137" y="89" width="46" height="30"/>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8dy-uK-Jqm">
+                                            <rect key="frame" x="137" y="89" width="36" height="36"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Twitter">
+                                            <state key="normal" image="twitter-button">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
@@ -243,11 +243,11 @@
             </objects>
             <point key="canvasLocation" x="1823" y="-127"/>
         </scene>
-        <!--Navigation Controller - News Feed-->
+        <!--Navigation Controller - Newsfeed-->
         <scene sceneID="4wZ-CX-axa">
             <objects>
                 <navigationController definesPresentationContext="YES" id="teY-rS-UVp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="News Feed" id="uAT-hJ-u7t"/>
+                    <tabBarItem key="tabBarItem" title="Newsfeed" id="uAT-hJ-u7t"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="yaZ-ZV-Qbb">
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -364,6 +364,10 @@
             <point key="canvasLocation" x="1274" y="-861"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="FB-button" width="36" height="36"/>
+        <image name="twitter-button" width="36" height="36"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
